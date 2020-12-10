@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="top"
+            android:hint="@string/str_message"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:minHeight="150dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+        <EditText
+            android:id="@+id/edit_text_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_message"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/str_secret_key"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_key"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_encrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg"
+                android:text="@string/str_encrypt"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_decrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg"
+                android:text="@string/str_decrypt"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_action"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/text_view_result_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_result_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

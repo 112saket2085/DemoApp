@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@id/menu_encryption"
+        android:title="@string/str_encryption"
+        android:icon="@drawable/ic_encryption"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@id/menu_to_do"
+        android:title="@string/str_to_do"
+        android:icon="@drawable/ic_to_do_list"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@id/menu_stopwatch"
+        android:title="@string/str_stopwatch"
+        android:icon="@drawable/ic_stopwatch"
+        app:showAsAction="ifRoom"/>
+
+</menu>

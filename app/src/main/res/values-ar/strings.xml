@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">DEMO APP</string>
+
+    <!--Generic Dialog Messages-->
+    <string name="dialog_btn_ok_text">حسنا</string>
+    <string name="dialog_btn_cancel_text">إلغاء</string>
+    <string name="button_yes">YES</string>
+    <string name="button_no">NO</string>
+
+    <!-- Login Fragment-->
+    <string name="str_google_sign_in">Sign In By Google</string>
+    <string name="str_sign_in" tools:ignore="TypographyEllipsis">Logging In...Please wait</string>
+
+    <!--Encrypt Decrypt Fragment-->
+    <string name="str_message">رسالة</string>
+    <string name="str_secret_key">المفتاح السري</string>
+    <string name="str_encrypt">تشفير</string>
+    <string name="str_decrypt">فك تشفير</string>
+    <string name="str_default_err_message">Something Went Wrong..Please try again</string>
+    <string name="str_encrypted_text">Encrypted Text :</string>
+    <string name="str_decrypted_text">Decrypted Text :</string>
+
+    <!-- Bottom Navigation Menu-->
+    <string name="str_encryption">التشفير</string>
+    <string name="str_to_do">لكى يفعل</string>
+    <string name="str_stopwatch">ساعة التوقيف</string>
+
+    <!-- Drawer Menu-->
+    <string name="str_change_language">إلغاء</string>
+    <string name="str_logout">تسجيل خروج</string>
+    <string name="str_logout_msg" tools:ignore="TypographyEllipsis">Logging Out...Please wait</string>
+    <string name="str_logout_info">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="str_user_logo">User Logo</string>
+    <string name="str_welcome">أهلا بك %s</string>
+
+    <!-- To Do List Fragment-->
+    <string name="str_no_task_added">No Task Added.Please add task by clicking add button.</string>
+    <string name="str_add_task">Add Task</string>
+    <string name="str_delete_task">حذف</string>
+    <string name="str_delete_task_info">هل أنت متأكد أنك تريد حذف هذه المهمة؟</string>
+
+    <!-- Add Task Fragment-->
+    <string name="str_enter_task">اسم المهمة</string>
+    <string name="str_select_task_date">الوقت</string>
+    <string name="str_select_task_time">التاريخ</string>
+    <string name="str_save">أضف</string>
+    <string name="str_clear">واضح</string>
+    <string name="str_formatted_time">%s:%s %s</string>
+    <string name="str_task_added">Task Added</string>
+    <string name="str_task_added_success">Task Added Successfully</string>
+
+    <!-- StopWatch Fragment-->
+    <string name="str_stop">Stop</string>
+    <string name="str_play">Play</string>
+    <string name="str_pause">Pause</string>
+    <string name="str_timer">%s:%s:%s</string>
+    <string name="str_default_timer">00:00:00</string>
+
+    <!-- Change Language Strings-->
+    <string name="str_english" translatable="false">English</string>
+    <string name="str_arabic" translatable="false">Arabic</string>
+
+</resources>

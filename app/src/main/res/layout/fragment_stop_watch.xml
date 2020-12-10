@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/drawable_timer_bg"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_view_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_default_timer"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_timer"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_view_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/str_stop"
+            android:src="@drawable/ic_stop" />
+
+        <ImageView
+            android:id="@+id/image_view_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/image_view_stop"
+            android:contentDescription="@string/str_play"
+            android:src="@drawable/ic_play" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
