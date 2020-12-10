@@ -37,6 +37,7 @@ public class LocaleUtils {
         Locale.setDefault(locale);
         Resources resources=context.getResources();
         Configuration config = resources.getConfiguration();
+        config.setLayoutDirection(locale);
         config.setLocale(locale);
         context = context.createConfigurationContext(config);
         return context;

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
@@ -18,6 +20,7 @@ import com.example.demoapplication.utility.DialogHelper;
 import com.example.demoapplication.utility.Util;
 import com.example.demoapplication.viewmodel.TaskInfoViewModel;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class AddTaskFragment extends BaseFragment{
 
@@ -104,16 +107,23 @@ public class AddTaskFragment extends BaseFragment{
     }
 
     private void createDatePicker() {
+        Locale locale = getResources().getConfiguration().locale;
+        Locale.setDefault(locale);
+
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog datePickerDialog = new DatePickerDialog(requireActivity(), (view, year1, month1, dayOfMonth) -> {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getParentActivity(), (view, year1, month1, dayOfMonth) -> {
             calendar.set(year1, month1, dayOfMonth);
             taskDate = DateConverterManager.getInstance().getInputDateString(calendar.getTime());
             binding.editTextTaskDate.setText(DateConverterManager.getInstance().getOutputDateString(taskDate));
         }, year, month, day);
+        Window window = datePickerDialog.getWindow();
+        if(window!=null) {
+            window.getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
+        }
         datePickerDialog.show();
     }
 
@@ -121,7 +131,7 @@ public class AddTaskFragment extends BaseFragment{
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int min = calendar.get(Calendar.MINUTE);
-        TimePickerDialog timePickerDialog = new TimePickerDialog(requireActivity(), (view, hourOfDay, minute) -> {
+        TimePickerDialog timePickerDialog = new TimePickerDialog(getParentActivity(), (view, hourOfDay, minute) -> {
             String amPM = hourOfDay < 12 ? "AM" : "PM";
             String formattedMin = minute > 9 ? String.valueOf(minute) : "0" + minute;
             taskTime = getString(R.string.str_formatted_time, String.valueOf(hourOfDay), formattedMin, amPM);

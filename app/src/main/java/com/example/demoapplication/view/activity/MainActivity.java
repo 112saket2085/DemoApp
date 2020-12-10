@@ -33,6 +33,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Locale;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,NavController.OnDestinationChangedListener, NavigationView.OnNavigationItemSelectedListener {
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         initViews();
         initProgressDialog();
         checkForLoggedIn();
+        getResources().getConfiguration().setLocale(new Locale(AppConfig.getInstance().getLocale()));
     }
 
     private void initViews() {

@@ -3,6 +3,8 @@ package com.example.demoapplication.utility;
 import android.app.Activity;
 import android.app.Dialog;
 import android.view.View;
+import android.view.Window;
+
 import androidx.appcompat.app.AlertDialog;
 import com.example.demoapplication.R;
 
@@ -33,6 +35,11 @@ public class DialogHelper {
                 }
             });
             Dialog dialog = builder.create();
+            Window window = dialog.getWindow();
+            if(window!=null) {
+                window.getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
+            }
+
             if (!context.isFinishing()) {
                 dialog.show();
             }
