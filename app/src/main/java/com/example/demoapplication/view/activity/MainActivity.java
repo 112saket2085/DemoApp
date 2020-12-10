@@ -171,7 +171,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     if (task.isSuccessful()) {
                         dismissProgressDialog();
                         FirebaseAuth.getInstance().signOut();
-                        navController.popBackStack(R.id.loginFragment, false);
+                        navController.popBackStack(R.id.menu_encryption,true);
+                        navController.navigate(R.id.loginFragment, null, getNavOptions());
                     }
                 });
             }

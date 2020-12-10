@@ -105,8 +105,8 @@ public class AddTaskFragment extends BaseFragment{
 
     private void createDatePicker() {
         Calendar calendar = Calendar.getInstance();
-        int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(requireActivity(), (view, year1, month1, dayOfMonth) -> {
